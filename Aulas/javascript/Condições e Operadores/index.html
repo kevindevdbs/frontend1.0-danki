@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições e Operadores</title>
+</head>
+
+<body>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="button" value="Clique" onclick="verificarDados()">
+    <br>
+    <input type="number" id="idade" placeholder="Idade">
+    
+</body>
+
+<script>
+    function verificarDados() {
+        var nome = document.getElementById('nome').value;
+        var idade = document.getElementById('idade').value;
+
+        if (nome === '') {
+            window.alert('Digite seu nome');
+        } else {
+            verificarNome(nome);
+        }
+
+        if (idade === '') {
+            window.alert('Digite sua idade');
+        } else {
+            verificarIdade(idade);
+        }
+    }
+
+    function verificarNome(nome) {
+        if (nome.toLowerCase() === 'kevin') {
+            window.alert('Seja bem vindo');
+        } else if (nome.toLowerCase() === 'joaquim') {
+            window.alert('Seja bem vindo');
+        } else {
+            window.alert('Você Não é Bem Vindo');
+        }
+    }
+
+    function verificarIdade(idade) {
+        if (idade >= 18) {
+            window.alert('Maior de idade');
+        } else {
+            window.alert('Menor de idade');
+        }
+    }
+</script>
+
+</html>

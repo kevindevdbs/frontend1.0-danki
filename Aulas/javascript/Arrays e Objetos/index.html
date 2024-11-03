@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays E Objetos</title>
+</head>
+
+<body>
+
+</body>
+
+
+<script>
+    function nomes() {
+        var nomearr = ['Kevin', 'Joaquim', 'Pedro', 'Ciclano'];
+        console.log(nomearr[2]); // arrays
+    }
+
+    nomes(); //chamando a função
+
+    function nome() {
+        var nome = {
+            nome: 'Kevin',
+            sobrenome: 'Dias',
+            idade: 21
+        };
+        console.log(`${nome.nome} ${nome.sobrenome} tem ${nome.idade} anos`); // objetos
+
+        console.log (typeof nome); // typeoff objeto
+        console.log (typeof nomes); // typeoff funcao
+        console.log (typeof 'Kevin'); // typeoff string
+        console.log (typeof 21); // typeoff number
+    }
+
+    nome(); //chamando a função 
+</script>
+
+</html>
