@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Conteudo do site">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Kevin Dias">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <div class="logo1"></div>
+            </div> <!-- logo1 -->
+            <div>
+                <div class="logo2"></div>
+            </div> <!-- logo2 -->
+            <div class="clear"></div> <!-- clear -->
+        </div> <!-- container -->
+    </header>
+
+    <section class="cover-form">
+        <div class="container bg">
+            <div class="form-container">
+                <h2>PREENCHA O FORMULÁRIO E CONVERSE COM NOSSO CONSULTOR !</h2>
+                <form>
+                    <div class="form-wraper">
+                        <p>Nome Completo</p>
+                        <input type="text" placeholder="Nome" name="nome" >
+                    </div> <!-- form-wraper -->
+
+                    <div class="form-wraper">
+                        <p>Email</p>
+                        <input type="email" placeholder="E-mail" name="email" >
+                    </div> <!-- form-wraper -->
+
+                    <div class="form-wraper">
+                        <p>Telefone</p>
+                        <input type="tel" placeholder="Telefone" name="telefone" >
+                    </div> <!-- form-wraper -->
+
+                    <div class="form-wraper">
+                        <input type="submit" value="ENVIAR" name="enviar" onclick="Avisos()">
+                    </div> <!-- form-wraper -->
+
+                    <div class="form-wraper">
+                        <p>*Campos obrigatórios.</p>
+                    </div> <!-- form-wraper -->
+
+                    <div class="form-wraper">
+                        <p>*Entraremos em contato via WhatsApp .</p>
+                    </div> <!-- form-wraper -->
+
+
+                </form>
+            </div> <!-- form-container -->
+            <div class="clear"></div>
+        </div> <!-- container bg -->
+    </section> <!-- cover-form -->
+
+
+    <section class="chamada">
+        <div class="icone-seta"></div>        
+        <div class="container">
+            <h2>Viva a vida que vocé merece !</h2>
+            <p>Coberturas e apartamentos em condomínios de luxo.</p>
+        </div> <!-- container -->
+    </section> <!-- chamada -->
+
+    <section class="mosaico">
+        <div class="container">
+            <div class="flex-mosaico">
+
+                <div style="background-image: url('Imagens/mosaico1.jpg');" class="item1-mosaico">
+                </div> <!-- item1-mosaico -->
+
+                <div class="item2-mosaico">
+                    <p>Espaço Amplo e moderno para sua família.</p>
+                </div> <!-- item2-mosaico -->
+
+            </div> <!-- flex-mosaico -->
+
+            <div style="flex-direction: row-reverse;" class="flex-mosaico">
+                
+                <div style="background-image: url('Imagens/mosaico2.jpg');" class="item1-mosaico">
+                </div> <!-- item1-mosaico -->
+                
+                <div class="item2-mosaico">
+                    <p>Aconchegante e confortável para socializar com os amigos.</p>
+                </div> <!-- item2-mosaico -->
+                    
+                </div> <!-- flex-mosaico -->
+
+                <div class="flex-mosaico">
+
+                    <div style="background-image: url('Imagens/mosaico3.jpg');" class="item1-mosaico">
+                    </div> <!-- item1-mosaico -->
+    
+                    <div class="item2-mosaico">
+                        <p>Diversão para você, seus amigos e familiares.</p>
+
+                    </div> <!-- item2-mosaico -->
+    
+                </div> <!-- flex-mosaico -->
+    
+                <div style="flex-direction: row-reverse;" class="flex-mosaico">
+                    
+                    <div style="background-image: url('Imagens/mosaico4.jpg');" class="item1-mosaico">
+                    </div> <!-- item1-mosaico -->
+                    
+                    <div class="item2-mosaico">
+                        <p>Uma Sala Moderna para descanso e leitura.</p>
+                    </div> <!-- item2-mosaico -->
+                        
+                    </div> <!-- flex-mosaico -->
+        </div> <!-- container -->
+    </section> <!-- mosaico -->
+
+    <footer>
+        <img src="Imagens/logo1.png" alt="logo">
+        <p>Desenvolvido por <a href="https://github.com/kevindevdbs">@KevinDev</a></p>
+    </footer>
+</body>
+
+</html>

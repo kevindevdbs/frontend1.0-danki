@@ -1,0 +1,250 @@
+/* Divs gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans' sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Fim das divs gerais */
+
+
+header {
+    padding: 10px 2% 40px 2%;
+    background-color: rgb(223, 222, 222);
+}
+
+.logo1 {
+    float: left;
+    width: 160px;
+    height: 90px;
+    background-image: url(../Imagens/logo1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-left: 100px;
+}
+
+.logo2 {
+    float: right;
+    width: 160px;
+    height: 90px;
+    background-image: url(../Imagens/logo2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 100px;
+}
+
+section .cover-form {
+    width: 100%;
+}
+
+.bg {
+    position: relative;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../Imagens/bg\ form.jpg);
+}
+
+.form-container {
+    position: absolute;
+    top : -2.5%;
+    right: 30px;
+    width: 400px;
+    height: 105%;
+    background-color: white;
+    box-shadow: 1px 1px 2px 1px rgb(180, 180, 180);
+}
+
+.form-container h2 {
+    font-weight: normal;
+    font-size: 18px;
+    padding: 25px 15px;
+    color: black;
+    background-color: rgb(190, 189, 189);
+}
+
+.form-container form {
+    margin-top: 8px;
+    padding: 20px;
+}
+
+.form-container form p {
+    font-size: 13px;
+    color: #525252;
+}
+
+.form-wraper:not(:first-child) {
+
+    margin-top: 20px;
+}
+
+.form.form-wraper:last-child {
+    margin-top: 40px;
+}
+
+.form-container form input {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+}
+
+.form-container form input[type="submit"] {
+    background-color: #033c50;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bolder;
+    height: 50px;
+    cursor: pointer;
+    padding-top: 0;
+    border: 0;
+}
+
+section.chamada{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+    background-color: #525252;
+}
+
+section.chamada div.container{
+    background-color: #525252;
+    padding: 70px 0 50px 0;
+}
+
+
+section.chamada h2{
+    width: 98%;
+    max-width: 700px;
+    display: inline-block;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+section.chamada p{
+    width: 98%;
+    margin-top: 10px;
+    color : white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.flex-mosaico{
+    display: flex;
+}
+
+.item1-mosaico{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60%;
+}
+
+.item2-mosaico{
+    padding: 60px 40px;
+    width: 40%;
+    background-color: #656565;
+    color: white;
+    font-weight: bold;
+    height: 300px;
+    font-size: 22px;
+}
+
+footer{
+    background-color: rgb(223, 222, 222);
+    text-align: center;
+}
+
+footer p {
+    padding: 10px 0;
+    font-weight: bolder;
+}
+
+footer p a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+footer img{
+    width: 120px;
+    margin-top: 15px;
+}
+
+
+
+/* Media Queries */
+
+@media screen and  (max-width: 768px) {
+
+    .flex-mosaico{
+        display: block;
+    }
+
+    .item1-mosaico{
+        padding-top: 100%;
+        width: 100%;
+        height: 250px;
+    }
+
+    .item2-mosaico{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .bg {
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .form-container{
+        height: auto;
+        position: static;
+        display: inline-block;
+        width: 96%;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        text-align: center;
+    }
+
+    .logo1,
+    .logo2 {
+        display: block;
+        float: none;
+        margin: auto;
+    }
+}
+
+/* Fim Media Queries */
