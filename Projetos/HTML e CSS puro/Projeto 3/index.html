@@ -123,7 +123,7 @@
 	<h2>Faça uma visita</h2>
 		<div class="map-wraper3">
 		<div class="map-wraper2">
-			<div id="map" class="map"></div><!--map-->
+			<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCx8sh_HlLuleKqI2-ujHXj3P4jZfhnSUQ'></script><div class="map" id='gmap_canvas'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style> <a href='http://maps-generator.com/pt'>maps-generator.com</a><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(-27.586811,-48.54557299999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-27.586811,-48.54557299999999)});infowindow = new google.maps.InfoWindow({content:'<p style="color:black;text-align:left;font-weight:bold;">Meu Mapa</p><p style="color:black;text-align:left;">Rua Rafael Bandeira Florianópolis</p><br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 		</div><!--map-wraper2-->
 		</div><!--map-wraper-3-->
 	</div><!--map-wraper-->
