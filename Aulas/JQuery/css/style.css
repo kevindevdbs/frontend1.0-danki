@@ -6,3 +6,8 @@
 html,body{
     height: 100%;
 }
+.artigo1{
+    width: 100%;
+    background-color: aqua;
+    padding: 30px;
+}
