@@ -15,7 +15,14 @@ link.on('click', function () {
 });
 */
 
-$('input[name="nome-pessoa"]').on('keyup', function () {
-    
+var func = function () {
+    $('input[type=text]').eq($(this).index()).css('background-color', 'red');
+}
+
+//$('input[type=text]').keyup(func)
+
+$('input[type=text]').keydown(func);
+
+
 });
-});
+a
