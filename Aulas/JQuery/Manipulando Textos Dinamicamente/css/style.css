@@ -8,8 +8,11 @@ html,body{
 }
 
 .box{
-    width: 500px;
+    width: 100%;
     background-color: #ccc;
-    padding: 20px;
+    padding: 30px;
+}
 
+h1.texto1{
+    color: red;
 }
