@@ -32,9 +32,10 @@ $(function () {
     //Eventos do Formulário
 
 
-    $('input[type=text]').focus(function () {
+    $('form#form1').submit(function () {
         resetarcapominvalido($(this));
     })
+    
 
 
     $('form#form1').submit(function (e) {
@@ -45,7 +46,17 @@ $(function () {
 
         if (verificarnome(nome) == false) {
             aplicarcampoinvalido($('input[name=nome]'));
-        } else {
+
+        } else if (verificaremail(email) == false) {
+            aplicarcampoinvalido($('input[name=email]'));
+
+        } else if (verificartelefone(telefone) == false) {
+            aplicarcampoinvalido($('input[name=telefone]'));
+        }
+
+
+        else {
+            resetarcapominvalido($(this));
             alert('Formulário enviado com Sucesso!')
         }
     }
@@ -64,7 +75,7 @@ $(function () {
             'border': '2px solid red',
             'color': 'red'
         });
-        el.val('Campo Invalido!');
+       alert('Campo Invalido!');
         //el.data('invalido','true')
     };
 
@@ -87,7 +98,7 @@ $(function () {
         }
         var amount = nome.split(' ').length;
         var splitstr = nome.split(' ');
-        if (amount < 2) {
+        if (amount >= 2) {
             for (var i = 0; i < amount; i++) {
                 if (splitstr[i].match(/^[A-Z]{1}[a-z]{1,}$/)) {
 
@@ -100,5 +111,23 @@ $(function () {
         }
     }
 
+    function verificaremail(email) {
+
+        if (email.match(/^([a-z0-9]{1,})+@+([a-z.]{1,})$/) == null) {
+            return false;
+        }
+    }
+
+    function verificartelefone(telefone) {
+        if (telefone == '' || telefone.length < 10) {
+            return false;
+        }
+
+        if (telefone.match(/^\([0-9]{2}\)[0-9]{4,5}-[0-9]{4}$/) == null) {
+            return false;
+        }
+    }
+
 
 });
+
