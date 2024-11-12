@@ -49,9 +49,8 @@ html,body{
     transform: translate(-50%, -50%);
 }
 
-.form input[type=text],
-.form input[type=tel],
-.form input[type=email]{
+.form input[type=text]{
+    
     width: 100%;
     height: 48px;
     line-height: 48px;

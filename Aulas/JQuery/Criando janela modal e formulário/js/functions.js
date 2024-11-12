@@ -1,21 +1,7 @@
 $(function () {
 
-    /*
-        var frase = 'kevin@hotmail.com';
-    
-        var verifica = frase.match(/^(.*?)(@)(.*?)$/);
-    
-        if (verifica != null) {
-            console.log('Encontramos algo');
-            console.log(verifica[1]);
-            console.log(verifica[2]);
-            console.log(verifica[3]);
-        }
-        else {
-            console.log('Não encontramos nada');
-        }
-    
-        */
+    //Funções de Abrir e fechar formulário
+
 
     verificarcliquefechar();
     abrirjanela();
@@ -26,7 +12,6 @@ $(function () {
             $('.bg').fadeIn();
         });
     }
-
 
     function verificarcliquefechar() {
         var el = $('body,.closebtn');
@@ -41,38 +26,79 @@ $(function () {
 
     }
 
+
+
+
+    //Eventos do Formulário
+
+
+    $('input[type=text]').focus(function () {
+        resetarcapominvalido($(this));
+    })
+
+
     $('form#form1').submit(function (e) {
         e.preventDefault();
         var nome = $('input[name=nome]').val();
         var email = $('input[name=email]').val();
         var telefone = $('input[name=telefone]').val();
 
-        //Contando a Quantidade De Espaços e os respectivos valores.
+        if (verificarnome(nome) == false) {
+            aplicarcampoinvalido($('input[name=nome]'));
+        } else {
+            alert('Formulário enviado com Sucesso!')
+        }
+    }
+
+    )
+
+
+
+
+
+    //Funções para  Estlizar o campo do Formulário
+
+
+    function aplicarcampoinvalido(el) {
+        el.css({
+            'border': '2px solid red',
+            'color': 'red'
+        });
+        el.val('Campo Invalido!');
+        //el.data('invalido','true')
+    };
+
+    function resetarcapominvalido(el) {
+        el.css({
+            'border': '1px solid #ccc',
+            'color': 'black'
+        });
+        el.val('');
+    }
+
+
+
+    //Funções de Verificação de Campos
+
+
+    function verificarnome(nome) {
+        if (nome == '') {
+            return false;
+        }
         var amount = nome.split(' ').length;
         var splitstr = nome.split(' ');
-
         if (amount < 2) {
             for (var i = 0; i < amount; i++) {
-
-                if (!splitstr[i].match(/^[a-zA-Z]+$/)) {
+                if (splitstr[i].match(/^[A-Z]{1}[a-z]{1,}$/)) {
 
                 } else {
-                    aplicarcampoinvalido($('input[name=nome]'));
                     return false;
                 }
             }
         } else {
-            aplicarcampoinvalido($('input[name=nome]'));
-            alert('Digite Seu Nome Completo');
             return false;
         }
-    })
-
-    function aplicarcampoinvalido(el) {
-        el.css({ 'border': '2px solid red' });
-        el.data('invalido', 'true');
-        el.val('Campo Invalido!');
-
     }
+
 
 });
