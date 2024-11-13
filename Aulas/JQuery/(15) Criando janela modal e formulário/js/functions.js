@@ -39,19 +39,21 @@ $(function () {
 
 
     $('form#form1').submit(function (e) {
-        e.preventDefault();
         var nome = $('input[name=nome]').val();
         var email = $('input[name=email]').val();
         var telefone = $('input[name=telefone]').val();
 
         if (verificarnome(nome) == false) {
             aplicarcampoinvalido($('input[name=nome]'));
+            return false;
 
         } else if (verificaremail(email) == false) {
             aplicarcampoinvalido($('input[name=email]'));
+            return false;
 
         } else if (verificartelefone(telefone) == false) {
             aplicarcampoinvalido($('input[name=telefone]'));
+            return false;
         }
 
 
@@ -113,7 +115,7 @@ $(function () {
 
     function verificaremail(email) {
 
-        if (email.match(/^([a-z0-9]{1,})+@+([a-z.]{1,})$/) == null) {
+        if (email.match(/^([a-z0-9-_.]{1,})+@+([a-z.]{1,})$/) == null) {
             return false;
         }
     }

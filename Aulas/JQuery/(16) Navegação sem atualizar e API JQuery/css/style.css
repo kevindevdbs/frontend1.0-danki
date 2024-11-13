@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+
+nav{
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav a{
+    color : #333;
+    text-decoration: none;
+}
+
+
