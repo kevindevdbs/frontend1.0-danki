@@ -48,8 +48,8 @@ nav.mobile-menu:hover ul{
 }
 
 nav.mobile-menu ul{
-	opacity: 0;
-	transition: 1s;
+	display: none;
+	/* transition: 1s; */
 	background-color: white;
 	position: absolute;
 	width: 100%;
@@ -72,6 +72,10 @@ nav.mobile-menu ul li:hover{
 nav.mobile-menu ul li a{
 	color: black;
 	text-decoration: none;
+}
+
+nav.mobile-menu a{
+	width: 100%;
 }
 
 header .logo{
