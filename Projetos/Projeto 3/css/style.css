@@ -256,10 +256,19 @@ section.sessao1 .container{
 	background: white;
 }
 
+.scroll-wrapper{
+	width: 100%;
+}
+
+.scroll-equipe{
+	max-width: 700px;
+	padding-left: 30px;
+	overflow: hidden;
+}
+
 .sobre-autor{
 	float: left;
-	max-width: 600px;
-	padding-left: 30px;
+	width: 100%;
 }
 
 .titulo-autor{

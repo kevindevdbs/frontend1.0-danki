@@ -5,7 +5,7 @@ $(function () {
 
     function abrirmenu(){
 
-        $('nav.mobile-menu').on('click', function () {
+        $('nav.menu-mobile , menu-desktop').on('click', function () {
             $(this).find('ul').slideToggle();
         });
     }
