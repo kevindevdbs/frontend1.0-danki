@@ -1,4 +1,4 @@
-$(function() {
+$ (function() {
     var currentvalue = 0;
     var isdrag = false;
     var precomaximo = 70000;
@@ -54,4 +54,37 @@ $(function() {
         $('body').css('-o-user-select', 'auto');
         $('body').css('user-select', 'auto');
     }
+
+    /*
+     mini img wraper = style="background-color:rgb(210,210,210);" 
+     foto destaque = style="background-image:url('imagens/carro1.jpg');" 
+     */
+
+     var imgshow = 3;
+     var maxindex = Math.ceil($('.mini-img-wraper').length/3)-1;
+     var curindex = 0;
+
+     initslider();
+     navegateslider();
+
+     function initslider() {
+        var amt = $('.mini-img-wraper').length * 33.3;
+        var elScroll = $('.nav-galeria-wraper');
+        var elSingle = $('.mini-img-wraper')
+        elScroll.css('width',amt+'%')
+        elSingle.css('width',33.3*(100/amt)+'%')
+     }
+
+     function navegateslider (){
+        $('.arrow-right-nav').click(function(){
+            if(curindex < maxindex){
+                curindex++;
+                var elOff = $('.mini-img-wraper').eq(curindex*3).offset().left - $('.nav-galeria-wraper').offset().left;
+                $('.nav-galeria').animate({'scrollLeft':elOff+'px'});
+            }
+            else{
+                console.log ('Chegamos até o final')
+            }
+        })
+     }
 })
