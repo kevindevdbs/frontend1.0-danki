@@ -1,18 +1,21 @@
-$ (function() {
+$(function () {
+
+    /*Sistema de Pesquisa*/
+
     var currentvalue = 0;
     var isdrag = false;
     var precomaximo = 70000;
 
-    $('.pointer-barra').mousedown(function() {
+    $('.pointer-barra').mousedown(function () {
         isdrag = true;
     });
 
-    $(document).mouseup(function() {
+    $(document).mouseup(function () {
         isdrag = false;
         enabletextselection();
     });
 
-    $('.barra-preco').mousemove(function(e) {
+    $('.barra-preco').mousemove(function (e) {
         if (isdrag) {
             disabletextselection();
             var elbase = $(this);
@@ -55,36 +58,68 @@ $ (function() {
         $('body').css('user-select', 'auto');
     }
 
-    /*
-     mini img wraper = style="background-color:rgb(210,210,210);" 
-     foto destaque = style="background-image:url('imagens/carro1.jpg');" 
-     */
 
-     var imgshow = 3;
-     var maxindex = Math.ceil($('.mini-img-wraper').length/3)-1;
-     var curindex = 0;
+     /*Sistema de Navegação por slider de cada foto individual  */
 
-     initslider();
-     navegateslider();
+    var imgshow = 3;
+    var maxindex = Math.ceil($('.mini-img-wraper').length / 3) - 1;
+    var curindex = 0;
 
-     function initslider() {
+    initslider();
+    navegateslider();
+    clickslider();
+
+    function initslider() {
         var amt = $('.mini-img-wraper').length * 33.3;
         var elScroll = $('.nav-galeria-wraper');
-        var elSingle = $('.mini-img-wraper')
-        elScroll.css('width',amt+'%')
-        elSingle.css('width',33.3*(100/amt)+'%')
-     }
+        var elSingle = $('.mini-img-wraper');
+        elScroll.css('width', amt + '%');
+        elSingle.css('width', 33.3 * (100 / amt) + '%');
+    }
 
-     function navegateslider (){
-        $('.arrow-right-nav').click(function(){
-            if(curindex < maxindex){
+    function navegateslider() {
+        $('.arrow-right-nav').click(function () {
+            if (curindex < maxindex) {
                 curindex++;
-                var elOff = $('.mini-img-wraper').eq(curindex*3).offset().left - $('.nav-galeria-wraper').offset().left;
-                $('.nav-galeria').animate({'scrollLeft':elOff+'px'});
+                var elOff = $('.mini-img-wraper').eq(curindex * 3).offset().left - $('.nav-galeria-wraper').offset().left;
+                $('.nav-galeria').animate({ 'scrollLeft': elOff + 'px' });
+            } else {
+                // console.log('Chegamos até o final');
             }
-            else{
-                console.log ('Chegamos até o final')
+        });
+
+        $('.arrow-left-nav').click(function () {
+            if (curindex > 0) {
+                curindex--;
+                var elOff = $('.mini-img-wraper').eq(curindex * 3).offset().left - $('.nav-galeria-wraper').offset().left;
+                $('.nav-galeria').animate({ 'scrollLeft': elOff + 'px' });
+            } else {
+                // console.log('Chegamos até o início');
             }
+        });
+    }
+
+    function clickslider() {
+        $('.mini-img-wraper').click(function () {
+            $('.mini-img-wraper').css('background-color', 'transparent');
+            $(this).css('background-color', 'rgb(210,210,210)');
+            var img = $(this).children().css('background-image');
+            $(".foto-destaque").css('background-image', img);
         })
-     }
-})
+
+        $('.mini-img-wraper').eq(0).click();
+    }
+
+    /*Sistema de scroll a sessão Contato*/
+
+    $('[goto=contato]').click(function () {
+        $('nav a').css('color', 'black');
+        $(this).css('color', '#EB2D2D')
+        $('html, body').animate({
+            scrollTop: $("#contato").offset().top
+        })
+        return false;
+
+    })
+
+});
