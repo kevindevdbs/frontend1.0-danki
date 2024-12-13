@@ -110,5 +110,11 @@ $(function () {
         $('.mini-img-wraper').eq(0).click();
     }
 
+    //Menu Responsivo
+
+    $('.mobile').click(function () {
+        $(this).find('ul').slideToggle();
+    });
+
    
 });
