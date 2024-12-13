@@ -116,5 +116,38 @@ $(function () {
         $(this).find('ul').slideToggle();
     });
 
+
+    //Sistema de Navegação Depoimentos
+
+    var amtdepoimento = $('.depoimento-single p').length;
+    var curindexdepoimento = 0;
+
+    navegarslidesdepoimentos();
+    iniciardepoimentos();
+
+    function navegarslidesdepoimentos() {
+
+        $('[next]').click(function () {
+            curindexdepoimento++;
+            if (curindexdepoimento >= amtdepoimento)
+                curindexdepoimento = 0;
+                $('.depoimento-single p').hide();
+                $('.depoimento-single p').eq(curindexdepoimento).fadeIn();
+    })
+
+    $('[prev]').click(function () {
+        curindexdepoimento--;
+        if (curindexdepoimento < 0)
+            curindexdepoimento = amtdepoimento - 1;
+            $('.depoimento-single p').hide();
+            $('.depoimento-single p').eq(curindexdepoimento).fadeIn();
+    })
+}
+
+function iniciardepoimentos() {
+    $('.depoimento-single p').hide();
+    $('.depoimento-single p').eq(0).show();
+}
+
    
 });
