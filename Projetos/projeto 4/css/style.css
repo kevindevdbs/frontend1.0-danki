@@ -5,6 +5,47 @@
 	font-family:'Montserrat', sans-serif;
 }
 
+/*Estilo para o Plugin slick*/
+
+.slick-dotted ul{
+	list-style-type: none;
+	text-align: center;
+	position: relative;
+	margin-top: 50px;
+}
+
+.slick-dotted li{
+	display: inline-block;
+	margin: 0 7px;
+}
+
+.slick-dotted button:focus{
+	outline: 0;
+}
+
+.slick-dotted li button{
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-radius: 8px;
+	border-width: 0;
+	background-color: #d8d8d8;
+	color: #d8d8d8;
+	opacity: 1;
+	cursor: pointer;
+}
+
+li.slick-active button{
+	background-color: #698293;
+	color: #698293;
+}
+
+.slick-slide:focus{
+	outline: none;
+}
+
+/*fim do estilo para o Plugin slick*/
+
 .clear{
 	clear: both;
 }
@@ -283,6 +324,7 @@ section.depoimentos .depoimento-single{
 	width: 32px;
 	height: 32px;
 	border-radius: 16px;
+	display: inline-block;
 }
 
 .nome-depoimento span{
