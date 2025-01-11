@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Classes Gerais - Framework*/
+
+.text-white{
+    color: white;
+}
+
+.gold{
+    background-color: gold;
+}
+
+.lightblue{
+    background-color: lightblue;
+}
+
+section .container {
+    width: 100%;
+}
+
+div.flex{
+    display: flex;
+    max-width: 960px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+div.w50{
+    width: 50%;
+}
+
+/*Classes Específicas do Site*/
+
+header.topo-site {
+    padding: 20px 0;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 17px;
+    position: relative;
+    top: 4px;
+}
+
+header.topo-site a {
+    text-decoration: none;
+    color: white;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+.logo {
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
