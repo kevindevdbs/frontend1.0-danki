@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Classes Gerais - Framework*/
+
+.text-white{
+    color: white;
+}
+
+.gold{
+    background-color: gold;
+}
+
+.lightblue{
+    background-color: lightblue;
+}
+
+section .container {
+    width: 100%;
+}
+
+div.flex{
+    display: flex;
+    max-width: 960px;
+    padding: 0 2%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+div.w33{
+    width: 33.3%;
+}
+
+div.w50{
+    width: 50%;
+}
+
+div.w100{
+    width: 100%;
+}
+
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+/*Media Quiery*/
+
+@media screen and (max-width: 768px) {
+    div.w50 {
+        width: 100%;
+    }
+
+    .left,.right {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    div.w33{
+        width: 100%;
+        padding: 40px 0;
+    }
+}
