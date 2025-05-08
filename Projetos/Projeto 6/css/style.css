@@ -34,6 +34,7 @@ header {
 }
 
 section.main{
+	position: relative;
 	background-image: url(/images/bg1.jpg);
 	background-size: cover;
 	background-position: center;
@@ -127,6 +128,32 @@ nav.desktop li a{
 	font-weight: lighter;
 	border-radius: 20px;
 }
+
+.chamada-planos{
+	width: 100%;
+	padding: 27px 2%;
+	text-align: center;
+	background-color: rgb(220, 220, 220);
+}
+
+.chamada-planos h2{
+	display: inline-block;
+	border-top: 2px solid #2692FF;
+	color: #2692FF;
+	text-transform: uppercase;
+	font-weight: lighter;
+	font-size: 25px;
+}
+
+.box-planos{
+	padding: 40px 0px;
+	background-color: white;;
+}
+
+
+
+
+
 
 
 /***/
